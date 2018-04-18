@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/inote-linux-client.iml" filepath="$PROJECT_DIR$/.idea/inote-linux-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/icloud-notes-linux-client.iml" filepath="$PROJECT_DIR$/.idea/icloud-notes-linux-client.iml" />
     </modules>
   </component>
 </project>

@@ -55,9 +55,11 @@ function debugLog(browserWindow, message) {
 }
 
 function getAppIcon() {
-    const iconPath = path.join(__dirname, '../build', `icon.${isWindows() ? 'ico' : 'png'}`);
-    console.log(`icon path = ${iconPath}`);
-    return iconPath;
+    return path.join(__dirname, 'assets', `icon.${isWindows() ? 'ico' : 'png'}`);
+}
+
+function getTrayIcon() {
+    return path.join(__dirname, 'assets', `48x48.${isWindows() ? 'ico' : 'png'}`)
 }
 
 export default {
@@ -69,4 +71,5 @@ export default {
     debugLog,
     shouldInjectCss,
     getAppIcon,
+    getTrayIcon
 };

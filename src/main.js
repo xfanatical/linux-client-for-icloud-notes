@@ -44,6 +44,19 @@ function createWindow () {
         mainWindow = null
     });
 
+    // Quit when all windows are closed.
+    mainWindow.on('close', function (event) {
+        if (!app.isQuiting) {
+            event.preventDefault();
+            mainWindow.hide();
+        }
+    });
+
+    mainWindow.on('minimize', function (event) {
+        event.preventDefault();
+        mainWindow.hide();
+    });
+
     mainWindowState.manage(mainWindow);
     return mainWindow;
 }
@@ -56,14 +69,9 @@ app.on('ready', () => {
     tray = createTrayIcon(mainWindow);
 });
 
-// Quit when all windows are closed.
-app.on('window-all-closed', function () {
-    // On OS X it is common for applications and their menu bar
-    // to stay active until the user quits explicitly with Cmd + Q
-    if (process.platform !== 'darwin') {
-        app.quit()
-    }
-});
+
+
+
 
 app.on('activate', function () {
     // On OS X it's common to re-create a window in the app when the

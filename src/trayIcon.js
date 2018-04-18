@@ -5,10 +5,10 @@ const {
     app, Tray, Menu, ipcMain, nativeImage,
 } = require('electron');
 
-const {getAppIcon} = helpers;
+const {getTrayIcon} = helpers;
 
 function createTrayIcon(mainWindow) {
-    const iconPath = getAppIcon();
+    const iconPath = getTrayIcon();
     const nimage = nativeImage.createFromPath(iconPath);
     const tray = new Tray(nimage);
 

@@ -163,3 +163,5 @@ fabric.properties
 
 # next.js build output
 /dist/
+/app/main.js*
+/app/preload.js*

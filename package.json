@@ -1,5 +1,5 @@
 {
-  "name": "icloud-note-linux-client",
+  "name": "icloud-notes-linux-client",
   "version": "0.1.0",
   "author": "Jason Huang <jasonh3308@gmail.com>",
   "description": "iCloud Note Linux Client, 3rd party",
@@ -12,7 +12,7 @@
     "e2e": "mocha temp/e2e.js --require source-map-support/register",
     "test": "npm run unit && npm run e2e",
     "start": "node build/start.js",
-    "dist": "webpack --config=build/webpack.app.config.js --env=production && electron-builder",
+    "dist": "webpack --config=build/webpack.app.config.js --mode=production && electron-builder",
     "postinstall": "electron-builder install-app-deps"
   },
   "devDependencies": {
@@ -43,18 +43,18 @@
       "package.json"
     ],
     "directories": {
-      "buildResources": "build"
+      "buildResources": "app/assets"
     },
     "linux": {
       "target": [
-        "snap",
-        "AppImage"
+        "snap"
       ],
       "icon": "icon.png",
       "category": "Network;TextTools;Office;GTK;GNOME"
     },
     "snap": {
-      "confinement": "devmode",
+      "confinement": "strict",
+      "grade": "stable",
       "summary": "iCloud Note Linux Client"
     }
   },
