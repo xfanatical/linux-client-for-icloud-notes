@@ -1,8 +1,9 @@
 {
   "name": "icloud-notes-linux-client",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "author": "Jason Huang <jasonh3308@gmail.com>",
   "description": "iCloud Note Linux Client, 3rd party",
+  "homepage": "http://squashme.biz/icloud-notes-linux-client",
   "private": true,
   "main": "app/main.js",
   "scripts": {
@@ -12,6 +13,7 @@
     "e2e": "mocha temp/e2e.js --require source-map-support/register",
     "test": "npm run unit && npm run e2e",
     "start": "node build/start.js",
+    "clean": "rm -rf dist",
     "dist": "webpack --config=build/webpack.app.config.js --mode=production && electron-builder",
     "postinstall": "electron-builder install-app-deps"
   },
@@ -23,15 +25,15 @@
     "chai": "^4.1.2",
     "css-loader": "^0.28.11",
     "electron": "^1.8.4",
-    "electron-builder": "^20.8.1",
-    "electron-mocha": "^6.0.1",
+    "electron-builder": "^20.10.0",
+    "electron-mocha": "^6.0.2",
     "friendly-errors-webpack-plugin": "^1.7.0",
-    "mocha": "^5.1.0",
-    "source-map-support": "^0.5.4",
+    "mocha": "^5.1.1",
+    "source-map-support": "^0.5.5",
     "spectron": "^3.8.0",
     "style-loader": "^0.20.3",
-    "webpack": "^4.5.0",
-    "webpack-cli": "^2.0.14",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15",
     "webpack-merge": "^4.1.2",
     "webpack-node-externals": "^1.7.2"
   },
@@ -49,13 +51,17 @@
       "target": [
         "snap"
       ],
-      "icon": "icon.png",
+      "icon": "icon-512x512.png",
       "category": "Network;TextTools;Office;GTK;GNOME"
     },
     "snap": {
       "confinement": "strict",
       "grade": "stable",
-      "summary": "iCloud Note Linux Client"
+      "summary": "iCloud Notes Linux Client"
+    },
+    "deb": {
+      "icon": "app/assets/icon-512x512.png",
+      "category": "Network;TextTools;Office;GTK;GNOME"
     }
   },
   "dependencies": {

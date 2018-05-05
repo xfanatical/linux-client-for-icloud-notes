@@ -13,6 +13,23 @@ const url = require('url');
 let mainWindow;
 let tray;
 
+const isSecondInstance = app.makeSingleInstance((commandLine, workingDirectory) => {
+  // Someone tried to run a second instance, we should focus our window.
+  if (mainWindow) {
+    if (!mainWindow.isVisible()) {
+      mainWindow.show();
+    }
+    if (mainWindow.isMinimized()) {
+      mainWindow.restore()
+    }
+    mainWindow.focus()
+  }
+})
+
+if (isSecondInstance) {
+  app.quit()
+}
+
 function createWindow () {
     const mainWindowState = windowStateKeeper({
         defaultWidth: 1200,

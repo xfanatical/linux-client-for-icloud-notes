@@ -55,11 +55,11 @@ function debugLog(browserWindow, message) {
 }
 
 function getAppIcon() {
-    return path.join(__dirname, 'assets', `icon.${isWindows() ? 'ico' : 'png'}`);
+    return path.join(__dirname, 'assets', `icon-512x512.${isWindows() ? 'ico' : 'png'}`);
 }
 
 function getTrayIcon() {
-    return path.join(__dirname, 'assets', `48x48.${isWindows() ? 'ico' : 'png'}`)
+    return path.join(__dirname, 'assets', `icon-48x48.${isWindows() ? 'ico' : 'png'}`)
 }
 
 export default {
