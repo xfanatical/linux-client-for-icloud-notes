@@ -15,6 +15,7 @@ module.exports = env => {
         env: path.resolve(__dirname, `../config/env_${env}.json`)
       }
     },
+    mode: 'development',
     devtool: "source-map",
     module: {
       rules: [

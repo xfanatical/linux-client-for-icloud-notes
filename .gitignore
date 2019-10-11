@@ -165,3 +165,5 @@ fabric.properties
 /dist/
 /app/main.js*
 /app/preload.js*
+
+.idea
