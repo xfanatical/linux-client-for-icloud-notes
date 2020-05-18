@@ -1,9 +1,9 @@
 {
   "name": "icloud-notes-linux-client",
   "version": "0.1.4",
-  "author": "Jason Huang <jasonh3308@gmail.com>",
-  "description": "iCloud Note Linux Client, 3rd party",
-  "homepage": "http://squashme.biz/icloud-notes-linux-client",
+  "author": "xFanatical <support@xfanatical.com>",
+  "description": "Linux Client for iCloud Notes, 3rd party",
+  "homepage": "https://snapcraft.io/icloud-notes-linux-client",
   "private": true,
   "main": "app/main.js",
   "scripts": {
@@ -39,7 +39,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "build": {
-    "appId": "biz.squashme.inotelinuxclient",
+    "appId": "com.xfanatical.icloudnoteslinuxclient",
     "files": [
       "app/**/*",
       "node_modules/**/*",
@@ -58,7 +58,7 @@
     "snap": {
       "confinement": "strict",
       "grade": "stable",
-      "summary": "iCloud Notes Linux Client",
+      "summary": "Linux Client for iCloud Notes",
       "plugs": [
         "desktop",
         "desktop-legacy",

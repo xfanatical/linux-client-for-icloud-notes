@@ -167,3 +167,4 @@ fabric.properties
 /app/preload.js*
 
 .idea
+/temp
