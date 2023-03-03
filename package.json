@@ -31,7 +31,7 @@
     "mocha": "^7.1.2",
     "npm": "^6.14.5",
     "source-map-support": "^0.5.19",
-    "spectron": "^10.0.1",
+    "spectron": "^19.0.0",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
